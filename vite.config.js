@@ -5,6 +5,7 @@ export default defineConfig(({ command, mode }) => {
   if (command === 'serve') {
     return {
       // dev 独有配置
+      publicPath: '/',
       plugins: [vue()],
       server: {
         host: 'localhost',
