@@ -1,25 +1,21 @@
 <template>
-  <div class="constructing">
-    Constructing
-    <p @click="handleBack">Back Home</p>
+  <div class="music">
+    Music
   </div>
 </template>
 <script>
 export default {
-  name: 'Constructing',
+  name: 'Music',
   data() {
     return {
     }
   },
   methods: {
-    handleBack() {
-      this.$router.push('/')
-    },
   }
 }
 </script>
 <style scoped lang="less">
-.constructing {
+.music {
   width: 100vw;
   min-height: 100vh;
   display: flex;

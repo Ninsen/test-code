@@ -1,20 +1,16 @@
 <template>
-  <div class="constructing">
-    Constructing
-    <p @click="handleBack">Back Home</p>
+  <div class="">
+    About
   </div>
 </template>
 <script>
 export default {
-  name: 'Constructing',
+  name: "About",
   data() {
     return {
     }
   },
   methods: {
-    handleBack() {
-      this.$router.push('/')
-    },
   }
 }
 </script>

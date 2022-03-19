@@ -1,17 +1,17 @@
 <template>
-  <button @click="countAdd">Click me to Add {{count}}</button>
+  <div>
+Home
+  </div>
 </template>
 <script>
 export default {
+  name:'Home',
   data() {
     return {
-      count: 0
     }
   },
   methods: {
-    countAdd() {
-      this.count++
-    }
+
   }
 }
 </script>
