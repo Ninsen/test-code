@@ -4,13 +4,24 @@
   </div>
 </template>
 <script>
+import { useStore, mapState } from 'vuex'
 export default {
   name: "About",
   data() {
     return {
     }
   },
+  setup() {
+  },
+  computed: {
+    ...mapState({
+      isMobile: (state) => state.isMobile
+    })
+  },
   methods: {
+  },
+  mounted() {
+    console.log(this.isMobile);
   }
 }
 </script>

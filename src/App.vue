@@ -1,10 +1,31 @@
 <template>
-  <Header />
-  <router-view></router-view>
+  <div id="app">
+    <Header />
+    <Comment />
+    <Card v-if="!isMobile" />
+    <router-view></router-view>
+  </div>
 </template>
 
-<script setup>
-import Header from './components/Header.vue'
+<script>
+import { mapState } from 'vuex'
+import Header from './components/Header/Header.vue'
+import Comment from './components/Comment/index.vue'
+import Card from './components/Card/index.vue'
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Comment,
+    Card
+  },
+  computed: {
+    ...mapState({
+      isMobile: (state) => state.isMobile
+    })
+
+  }
+}
 </script>
 
 <style lang="less">
