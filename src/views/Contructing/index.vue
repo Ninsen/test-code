@@ -4,18 +4,12 @@
     <p @click="handleBack">Back Home</p>
   </div>
 </template>
-<script>
-export default {
-  name: 'Constructing',
-  data() {
-    return {
-    }
-  },
-  methods: {
-    handleBack() {
-      this.$router.push('/')
-    },
-  }
+<script setup>
+import { useRouter } from 'vue-router'
+const $router = useRouter()
+// Methods
+const handleBack = () => {
+  $router.push('/')
 }
 </script>
 <style scoped lang="less">

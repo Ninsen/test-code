@@ -3,16 +3,7 @@
     Music
   </div>
 </template>
-<script>
-export default {
-  name: 'Music',
-  data() {
-    return {
-    }
-  },
-  methods: {
-  }
-}
+<script setup>
 </script>
 <style scoped lang="less">
 .music {

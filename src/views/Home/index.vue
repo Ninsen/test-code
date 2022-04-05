@@ -1,19 +1,11 @@
 <template>
   <div>
-Home
+    Home
   </div>
 </template>
-<script>
-export default {
-  name:'Home',
-  data() {
-    return {
-    }
-  },
-  methods: {
-
-  }
-}
+<script setup>
+import { reactive } from 'vue';
+const data = reactive({})
 </script>
 <style scoped lang="less">
 </style>

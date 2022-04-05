@@ -3,16 +3,8 @@
     Photo
   </div>
 </template>
-<script>
-export default {
-  name: 'Photo',
-  data() {
-    return {
-    }
-  },
-  methods: {
-  }
-}
+<script setup>
+
 </script>
 <style scoped lang="less">
 .photo {

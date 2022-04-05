@@ -7,25 +7,16 @@
   </div>
 </template>
 
-<script>
-import { mapState } from 'vuex'
+<script setup>
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 import Header from './components/Header/Header.vue'
 import Comment from './components/Comment/index.vue'
 import Card from './components/Card/index.vue'
-export default {
-  name: 'App',
-  components: {
-    Header,
-    Comment,
-    Card
-  },
-  computed: {
-    ...mapState({
-      isMobile: (state) => state.isMobile
-    })
-
-  }
-}
+const $store = useStore()
+const isMobile = computed(() => {
+  return $store.state.isMobile
+})
 </script>
 
 <style lang="less">

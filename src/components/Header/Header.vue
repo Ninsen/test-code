@@ -14,26 +14,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Header',
-  data() {
-    return {
-      routeArray: [['Ninsen', '/about'], ['首页', '/'], ['博文', '/blog'], ['音乐', '/music'], ['摄影', '/photo']],
-      routeMap: null
-    }
-  },
-  methods: {
-    handleHeader(e) {
-      if (e.target.nodeName != 'P') return
-      let target = e.target.innerText
-      this.$router.push(`${this.routeMap.get(target)}`)
-    }
-  },
-  mounted() {
-    this.routeMap = new Map(this.routeArray)
-  }
-}
+<script setup>
+import { reactive, onMounted } from 'vue';
+import { useRouter } from 'vue-router'
+const data = reactive({
+  routeArray: [['Ninsen', '/about'], ['首页', '/'], ['博文', '/blog'], ['音乐', '/music'], ['摄影', '/photo']],
+  routeMap: null
+});
+const $router = useRouter()
+// Methods
+const handleHeader = (e) => {
+  if (e.target.nodeName != 'P') return
+  let target = e.target.innerText
+  $router.push(`${data.routeMap.get(target)}`)
+};
+onMounted(() => {
+  data.routeMap = new Map(data.routeArray)
+});
+
 </script>
 
 <style scoped lang='less'>

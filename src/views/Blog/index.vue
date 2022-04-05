@@ -3,16 +3,8 @@
     Blog
   </div>
 </template>
-<script>
-export default {
-  name: 'Blog',
-  data() {
-    return {
-    }
-  },
-  methods: {
-  }
-}
+<script setup>
+
 </script>
 <style scoped lang="less">
 .blog {
